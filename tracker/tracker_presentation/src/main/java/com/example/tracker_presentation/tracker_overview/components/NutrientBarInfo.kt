@@ -21,7 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.core.R.string.grams
+import com.example.core.R
 import com.example.tracker_presentation.components.UnitDisplay
 
 @Composable
@@ -88,7 +88,7 @@ fun NutrientBarInfo(
         ) {
             UnitDisplay(
                 amount = value,
-                unit = stringResource(id = grams),
+                unit = stringResource(id = R.string.grams),
                 amountColor = if(value <= goal) {
                     MaterialTheme.colors.onPrimary
                 } else goalExceededColor,
