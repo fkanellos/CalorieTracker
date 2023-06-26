@@ -23,11 +23,11 @@ fun DaySelector(
     onNextDayClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Row (
+    Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
-            ){
+    ) {
         IconButton(onClick = onPreviousDayClick) {
             Icon(
                 imageVector = Icons.Default.ArrowBack,
@@ -44,7 +44,5 @@ fun DaySelector(
                 contentDescription = stringResource(id = R.string.next_day)
             )
         }
-
     }
-
 }
