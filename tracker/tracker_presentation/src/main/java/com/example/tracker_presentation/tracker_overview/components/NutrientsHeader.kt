@@ -13,7 +13,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.sp
-import com.example.core.R.string
+import com.example.core.R
 import com.example.core_ui.CarbColor
 import com.example.core_ui.FatColor
 import com.example.core_ui.LocalSpacing
@@ -51,7 +51,7 @@ fun NutrientsHeader(
         ) {
             UnitDisplay(
                 amount = animatedCalorieCount.value,
-                unit = stringResource(id = string.kcal ),
+                unit = stringResource(id = R.string.kcal),
                 amountColor = MaterialTheme.colors.onPrimary,
                 amountTextSize = 40.sp,
                 unitColor = MaterialTheme.colors.onPrimary,
@@ -59,13 +59,13 @@ fun NutrientsHeader(
             )
             Column {
                 Text(
-                    text = stringResource(id = string.your_goal),
+                    text = stringResource(id = R.string.your_goal),
                     style = MaterialTheme.typography.body2,
                     color = MaterialTheme.colors.onPrimary
                 )
                 UnitDisplay(
-                    amount = animatedCalorieCount.value,
-                    unit = stringResource(id = string.kcal),
+                    amount = state.caloriesGoal,
+                    unit = stringResource(id = R.string.kcal),
                     amountColor = MaterialTheme.colors.onPrimary,
                     amountTextSize = 40.sp,
                     unitColor = MaterialTheme.colors.onPrimary,
@@ -91,21 +91,21 @@ fun NutrientsHeader(
             NutrientBarInfo(
                 value = state.totalCarbs,
                 goal = state.carbsGoal,
-                name = stringResource(id = string.carbs),
+                name = stringResource(id = R.string.carbs),
                 color = CarbColor,
                 modifier = Modifier.size(90.dp)
             )
             NutrientBarInfo(
                 value = state.totalProtein,
                 goal = state.proteinGoal,
-                name = stringResource(id = string.protein),
+                name = stringResource(id = R.string.protein),
                 color = ProteinColor,
                 modifier = Modifier.size(90.dp)
             )
             NutrientBarInfo(
                 value = state.totalFat,
                 goal = state.fatGoal,
-                name = stringResource(id = string.fat),
+                name = stringResource(id = R.string.fat),
                 color = FatColor,
                 modifier = Modifier.size(90.dp)
             )
