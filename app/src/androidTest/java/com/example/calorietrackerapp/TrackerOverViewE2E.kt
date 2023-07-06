@@ -2,21 +2,18 @@ package com.example.calorietrackerapp
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import androidx.room.Delete
 import coil.annotation.ExperimentalCoilApi
 import com.example.calorietrackerapp.navigation.Route
 import com.google.common.truth.Truth.assertThat
@@ -28,14 +25,6 @@ import com.example.core.domain.model.GoalType
 import com.example.core.domain.model.UserInfo
 import com.example.core.domain.preferences.Preferences
 import com.example.core.domain.use_case.FilterOutDigits
-import com.example.onboarding_presentation.activity.ActivityScreen
-import com.example.onboarding_presentation.age.AgeScreen
-import com.example.onboarding_presentation.gender.GenderScreen
-import com.example.onboarding_presentation.goal.GoalScreen
-import com.example.onboarding_presentation.height.HeightScreen
-import com.example.onboarding_presentation.nutrient_goal.NutrientGoalScreen
-import com.example.onboarding_presentation.weight.WeightScreen
-import com.example.onboarding_presentation.welcome.WelcomeScreen
 import com.example.tracker_domain.model.TrackableFood
 import com.example.tracker_domain.use_case.*
 import com.example.tracker_presentation.search.SearchScreen
